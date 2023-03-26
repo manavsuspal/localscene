@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LocalScene</title>
+
+    <link rel="stylesheet" href="{% static 'event_styles.css' %}">
+  </head>
+  <body>
+    <div class="container">
+
+      <!-- Large column for event info -->
+      <div class="desc-div">
+        <img src="{{ event_image }}" alt="Event Photo" class="event-image">
+        <h1 class="event-title">{{ event_name }}</h1>
+        <p class="event-description">
+          {{ event_description }}
+        </p>
+      </div>
+      
+      <!-- Small column for event details -->
+      <div class="details-div">
+        <h2>Event Details</h2>
+        <ul class = "details-list">
+          <li><strong>Time:</strong> {{ event_time }}</li>
+          <li><strong>Venue:</strong> {{ event_venue }}</li>
+          <li><strong>State:</strong> {{ event_state }}</li>
+
+        </ul>
+        <button class="register-btn">Register</button>
+      </div>
+    </div>
+    
+  </body>
+</html>
